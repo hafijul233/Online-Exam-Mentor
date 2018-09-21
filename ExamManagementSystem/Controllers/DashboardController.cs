@@ -10,7 +10,7 @@ namespace ExamManagementSystem.Controllers
     {
         //
         // GET: /Dashboard/
-        public ActionResult Dashboard()
+        public ActionResult Index()
         {
             return View();
         }

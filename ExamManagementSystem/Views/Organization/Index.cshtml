@@ -1,7 +1,14 @@
 ﻿@{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
     ViewBag.Title = "Organization List";
+
 }
+<!-- DataTables -->
+<link rel="stylesheet" href="~/plugins/datatables/dataTables.bootstrap.css">
+<!-- DataTables -->
+<script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="~/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
 <section class="content-header">
     <h1>
         Organizations List
@@ -466,4 +473,16 @@
     <!-- /.row -->
 </section>
 <!-- /.content -->
-@RenderSection()
+<script>
+    $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false
+        });
+    });
+</script>
