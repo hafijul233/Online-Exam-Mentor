@@ -10,6 +10,5 @@ namespace Models
     {
         public string EmailAddress { get; set; }
         public string PassWord { get; set; }
-
     }
 }
