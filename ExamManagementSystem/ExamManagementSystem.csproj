@@ -162,9 +162,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\BatchController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\ExamController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrganizationController.cs" />
+    <Compile Include="Controllers\ParticipantController.cs" />
+    <Compile Include="Controllers\TrainerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -174,6 +179,40 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\HTML REF Codes\pages\calendar.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\charts\chartjs.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\charts\flot.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\charts\inline.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\charts\morris.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\examples\404.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\examples\500.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\examples\blank.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\examples\invoice-print.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\examples\invoice.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\examples\lockscreen.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\examples\login.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\examples\pace.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\examples\profile.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\examples\register.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\forms\advanced.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\forms\editors.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\forms\general.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\layout\boxed.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\layout\collapsed-sidebar.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\layout\fixed.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\layout\top-nav.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\mailbox\compose.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\mailbox\mailbox.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\mailbox\read-mail.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\tables\data.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\tables\simple.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\UI\buttons.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\UI\general.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\UI\icons.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\UI\modals.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\UI\sliders.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\UI\timeline.html" />
+    <Content Include="App_Data\HTML REF Codes\pages\widgets.html" />
     <Content Include="bootstrap\css\bootstrap-theme.css" />
     <Content Include="bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="bootstrap\css\bootstrap.css" />
@@ -1212,7 +1251,11 @@
     <Content Include="Views\Organization\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="Views\Batch\" />
+    <Folder Include="Views\Course\" />
+    <Folder Include="Views\Exam\" />
+    <Folder Include="Views\Participant\" />
+    <Folder Include="Views\Trainer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
