@@ -53,6 +53,16 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExamManagementSystem\ExamManagementSystem.csproj">
+      <Project>{db4e99bb-bbfc-4c6e-beae-f73fef04d1db}</Project>
+      <Name>ExamManagementSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{a54eb119-53c6-4468-ac80-3dd5cbbf8b2f}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
