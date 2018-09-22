@@ -13,5 +13,9 @@ namespace ExamManagementSystem.Controllers
         {
             return View();
         }
+        public ActionResult Entry()
+        {
+            return View();
+        }
     }
 }

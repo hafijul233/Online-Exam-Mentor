@@ -1249,14 +1249,18 @@
     <Content Include="Views\Organization\Entry.cshtml" />
     <Content Include="Views\Organization\Index.cshtml" />
     <Content Include="Views\Organization\Search.cshtml" />
+    <Content Include="Views\Batch\Entry.cshtml" />
+    <Content Include="Views\Batch\Index.cshtml" />
+    <Content Include="Views\Course\Entry.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\Exam\Entry.cshtml" />
+    <Content Include="Views\Exam\Index.cshtml" />
+    <Content Include="Views\Participant\Entry.cshtml" />
+    <Content Include="Views\Participant\Index.cshtml" />
+    <Content Include="Views\Trainer\Entry.cshtml" />
+    <Content Include="Views\Trainer\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Batch\" />
-    <Folder Include="Views\Course\" />
-    <Folder Include="Views\Exam\" />
-    <Folder Include="Views\Participant\" />
-    <Folder Include="Views\Trainer\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

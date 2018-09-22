@@ -14,5 +14,5 @@ namespace ExamManagementSystem.Controllers
         {
             return View();
         }
-	}
+    }
 }
