@@ -1274,6 +1274,11 @@
     <Content Include="Views\Participant\Index.cshtml" />
     <Content Include="Views\Trainer\Entry.cshtml" />
     <Content Include="Views\Trainer\Index.cshtml" />
+    <Content Include="Views\Batch\Search.cshtml" />
+    <Content Include="Views\Course\Search.cshtml" />
+    <Content Include="Views\Exam\Search.cshtml" />
+    <Content Include="Views\Participant\Search.cshtml" />
+    <Content Include="Views\Trainer\Search.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
