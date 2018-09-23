@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Organization Search";
+    ViewBag.Title = "Course Search";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <!-- DataTables -->
@@ -16,7 +16,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="~/Dashboard/"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="~/Organization/"></a>Organization</li>
+        <li><a href="~/Organization/"></a>Course</li>
         <li class="active">Search</li>
     </ol>
 </section>
@@ -34,16 +34,30 @@
                 <div class="box-body">
                     <!-- form start -->
                     <form role="form" class="form-horizontal">
+                        <fieldset>
+                            <legend>Search Criteria</legend>
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="Name" class="col-sm-3 control-label">Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Enter Org. Name" />
-                                    </div>
+                            <div class="form-group">
+                                <label for="Name" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" placeholder="Enter Org. Name" />
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="Name" class="col-sm-2 control-label">Duration</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" placeholder="Enter Org. Name" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Name" class="col-sm-2 control-label">To</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" placeholder="Enter Org. Name" />
+                                </div>
+                            </div>
+
+                            </div>
+                            <div class="col-lg-7">
                                 <div class="form-group">
                                     <label for="Name" class="col-sm-3 control-label">Address</label>
                                     <div class="col-sm-9">
@@ -68,6 +82,7 @@
                                 </div>
                             </div>
                         </div>
+                         </fieldset>
                         <div class="row">
                             <div class="col-lg-11">
                                 <div class="form-group">
