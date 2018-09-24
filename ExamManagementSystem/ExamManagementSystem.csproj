@@ -1237,6 +1237,7 @@
     <Content Include="Plugins\datatables\extensions\TableTools\Readme.md" />
     <Content Include="Plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Plugins\input-mask\phone-codes\phone-codes.json" />
+    <Content Include="App_Data\OnlineExamProject.zip" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
