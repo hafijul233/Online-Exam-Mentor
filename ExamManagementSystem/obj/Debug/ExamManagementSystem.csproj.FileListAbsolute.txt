@@ -275,3 +275,6 @@ C:\Users\pct\Desktop\Chesta\Hafizul\ExamManagementSystem\ExamManagementSystem\bi
 C:\Users\pct\Desktop\Chesta\Hafizul\ExamManagementSystem\ExamManagementSystem\obj\Debug\ExamManagementSystem.csprojResolveAssemblyReference.cache
 C:\Users\pct\Desktop\Chesta\Hafizul\ExamManagementSystem\ExamManagementSystem\obj\Debug\ExamManagementSystem.dll
 C:\Users\pct\Desktop\Chesta\Hafizul\ExamManagementSystem\ExamManagementSystem\obj\Debug\ExamManagementSystem.pdb
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\Models.dll
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\Models.pdb
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\Models.dll.config
