@@ -39,31 +39,38 @@
                                 <div class="form-group">
                                     <label for="Name" class="col-sm-3 control-label">Name</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Enter Org. Name" />
+                                       
+                                        @Html.TextBoxFor(c => c.Name, new { @class = "form-control", id = "Name", placeholder = "Enter Organization Name" })
+                                        @Html.ValidationMessageFor(c => c.Name, null, new { @class = "text-danger" })
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label for="Name" class="col-sm-3 control-label">Address</label>
+                                    <label for="Address" class="col-sm-3 control-label">Address</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Enter Org. Name" />
+                                        @Html.TextBoxFor(c => c.Address, new { @class = "form-control", id = "Address", placeholder = "Enter Organization Address" })
+                                        @Html.ValidationMessageFor(c => c.Address, null, new { @class = "text-danger" })
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label for="Name" class="col-sm-3 control-label">Code</label>
+                                    <label for="Code" class="col-sm-3 control-label">Code</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Enter Org. Name" />
+                                        @Html.TextBoxFor(c => c.Code, new { @class = "form-control", id = "Code", placeholder = "Enter Organization Code" })
+                                        @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label for="Name" class="col-sm-3 control-label">Contact No</label>
+                                    <label for="Contact" class="col-sm-3 control-label">Contact No</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Enter Org. Name" />
+                                        @Html.TextBoxFor(c => c.ContactNo, new { @class = "form-control", id = "ContactNo", placeholder = "Enter Organization Contact Number" })
+                                        @Html.ValidationMessageFor(c => c.ContactNo, null, new { @class = "text-danger" })
                                     </div>
                                 </div>
                             </div>
