@@ -286,3 +286,12 @@ E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\DBContext.dll
 E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\BLL.pdb
 E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\Repository.pdb
 E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\DBContext.pdb
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\BLL.dll
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\Repository.dll
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\DBContext.dll
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\BLL.pdb
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\BLL.dll.config
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\Repository.pdb
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\Repository.dll.config
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\DBContext.pdb
+I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\DBContext.dll.config

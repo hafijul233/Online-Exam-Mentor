@@ -1044,6 +1044,10 @@
     <Content Include="Plugins\jvectormap\jquery-jvectormap-usa-en.js" />
     <Content Include="Plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
     <Content Include="Plugins\knob\jquery.knob.js" />
+    <Content Include="Plugins\moment\moment-with-locales.js" />
+    <Content Include="Plugins\moment\moment-with-locales.min.js" />
+    <Content Include="Plugins\moment\moment.js" />
+    <Content Include="Plugins\moment\moment.min.js" />
     <Content Include="Plugins\morris\morris.css" />
     <Content Include="Plugins\morris\morris.js" />
     <Content Include="Plugins\morris\morris.min.js" />
@@ -1051,6 +1055,8 @@
     <Content Include="Plugins\pace\pace.js" />
     <Content Include="Plugins\pace\pace.min.css" />
     <Content Include="Plugins\pace\pace.min.js" />
+    <Content Include="Plugins\raphael\raphael-min.js" />
+    <Content Include="Plugins\raphael\raphael.js" />
     <Content Include="Plugins\select2\i18n\ar.js" />
     <Content Include="Plugins\select2\i18n\az.js" />
     <Content Include="Plugins\select2\i18n\bg.js" />
@@ -1300,6 +1306,7 @@
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
