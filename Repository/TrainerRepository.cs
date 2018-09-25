@@ -8,12 +8,13 @@ using Models;
 
 namespace Repository
 {
-    public class BatchRepository
+    public class OrganizationRepository
     {
         AbcExamManagerDb _EMSDb = new AbcExamManagerDb();
-        public int RepositoyEntry(Batch newBatch)
+        public int RepositoyEntry(Organization organization)
         {
-            _EMSDb.Batches.Add(newBatch);
+
+            _EMSDb.Organizations.Add(organization);
 
             int confirm = _EMSDb.SaveChanges();
 
