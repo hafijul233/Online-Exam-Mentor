@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Models.Course
+@{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <!-- bootstrap wysihtml5 - text editor -->
@@ -12,10 +13,10 @@
         Entry Page
         <small>Course</small>
     </h1>
-    <ol class="breadcrumb">
+    @*<ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
-    </ol>
+    </ol>*@
 </section>
 <!-- Main content -->
 <section class="content">
@@ -47,38 +48,44 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-3 control-label">Name</label>
+                            <label for="Name" class="col-sm-3 control-label">Name</label>
 
                             <div class="col-sm-7">
-                                <input type="password" class="form-control" placeholder="Password">
+                                @*<input type="password" class="form-control" placeholder="Password">*@
+                                @Html.TextBoxFor(c => c.Name, new { @class = "form-control", id = "Name", placeholder = "Enter Organization Name" })
+                                @Html.ValidationMessageFor(c => c.Name, null, new { @class = "text-danger" })
+
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-3 control-label">Code</label>
+                            <label for="Code" class="col-sm-3 control-label">Code</label>
 
                             <div class="col-sm-7">
-                                <input type="password" class="form-control" placeholder="Password">
+                                @*<input type="password" class="form-control" placeholder="Password">*@
+                                @Html.TextBoxFor(c => c.Code, new { @class = "form-control", id = "Code", placeholder = "Enter Organization Code" })
+                                @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword3" class="col-sm-3 control-label">Course Duration (hrs)</label>
 
                             <div class="col-sm-4">
-                                <input type="password" class="form-control" placeholder="Password">
+                                @*<input type="password" class="form-control" placeholder="Password">*@
+
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword3" class="col-sm-3 control-label">Credit</label>
 
                             <div class="col-sm-4">
-                                <input type="password" class="form-control" placeholder="Password">
+                                @*<input type="password" class="form-control" placeholder="Password">*@
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword3" class="col-sm-3 control-label">Outline</label>
 
                             <div class="col-sm-7">
-                                <textarea id="editor1" name="editor1" rows="10" cols="80"></textarea>
+                                @*<textarea id="editor1" name="editor1" rows="10" cols="80"></textarea>*@
                             </div>
                         </div>
                         <div class="form-group">
