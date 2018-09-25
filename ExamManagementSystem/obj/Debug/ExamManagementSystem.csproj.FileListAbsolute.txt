@@ -278,3 +278,5 @@ C:\Users\pct\Desktop\Chesta\Hafizul\ExamManagementSystem\ExamManagementSystem\ob
 I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\Models.dll
 I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\Models.pdb
 I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\Models.dll.config
+E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\Models.dll
+E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\Models.pdb

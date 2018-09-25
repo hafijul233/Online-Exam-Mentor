@@ -1259,7 +1259,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Dashboard\Index.cshtml" />
@@ -1282,6 +1281,7 @@
     <Content Include="Views\Participant\Search.cshtml" />
     <Content Include="Views\Trainer\Search.cshtml" />
     <Content Include="Views\Organization\Information.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">
