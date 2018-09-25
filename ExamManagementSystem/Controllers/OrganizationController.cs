@@ -34,14 +34,10 @@ namespace ExamManagementSystem.Controllers
 
                 if (isAdded == true)
                 {
-                    ModelState.AddModelError("", "There is an tar char error error occured");
-
                     ViewBag.Organization = newOrganization;
 
                     return View("Information");
                 }
-
-                ModelState.AddModelError("", "is added is false");
 
                 ViewBag.Organization = newOrganization;
 
@@ -49,8 +45,6 @@ namespace ExamManagementSystem.Controllers
 
             }
 
-                ModelState.AddModelError("", "There is an tar char error error occured");
-                
                 ViewBag.Organization = newOrganization;
             
                return View();    
