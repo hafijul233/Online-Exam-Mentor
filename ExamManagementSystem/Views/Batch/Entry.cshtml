@@ -7,11 +7,12 @@
 <section class="content-header">
     <h1>
         Entry Page
-        <small>batch</small>
+        <small>Batch</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
+        <li>Batch</li>
+        <li class="active">Entry</li>
     </ol>
 </section>
 <!-- Main content -->
@@ -30,7 +31,7 @@
                 <form class="form-horizontal">
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-3 control-label">Organization</label>
+                            <label for="Organization" class="col-sm-3 control-label">Organization</label>
 
                             <div class="col-sm-7">
                                 <select class="form-control">
@@ -66,26 +67,27 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-3 control-label">Description</label>
+                            <label for="Description" class="col-sm-3 control-label">Description</label>
 
                             <div class="col-sm-7">
-                                @Html.TextAreaFor(c => c.Description, new { @class = "form-control", placeholder = "Batch Number" })
-@Html.ValidationMessageFor(c => c.Description, null, new { @class = "text-danger" })
+                                @Html.TextAreaFor(c => c.Description, new { @class = "form-control", placeholder = "Batch Number",rows="3" })
+                                @Html.ValidationMessageFor(c => c.Description, null, new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="start" class="col-sm-3 control-label">Start Date</label>
+                            <label for="StartDate" class="col-sm-3 control-label">Start Date</label>
 
                             <div class="col-sm-4">
-                                @Html.TextBoxFor(c => c.BatchNo, new { @class = "form-control pull-right", placeholder = "2018-09-23", id = "startdatepicker" })
-                                @Html.ValidationMessageFor(c => c.BatchNo, null, new { @class = "text-danger" }) 
+                                @Html.TextBoxFor(c => c.StartDate, new { @class = "form-control pull-right", placeholder = "2018-09-23", id = "startdatepicker",required})
+                                @Html.ValidationMessageFor(c => c.StartDate, null, new { @class = "text-danger" }) 
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="start" class="col-sm-3 control-label">End Date</label>
+                            <label for="EndDate" class="col-sm-3 control-label">End Date</label>
 
                             <div class="col-sm-4">
-                                <input type="text" class="form-control pull-right" id="enddatepicker" name="birthDate" placeholder="2018-09-13" required>
+                                @Html.TextBoxFor(c => c.EndDate, new { @class = "form-control pull-right", placeholder = "2018-09-23", id = "enddatepicker", required})
+                                @Html.ValidationMessageFor(c => c.EndDate, null, new { @class = "text-danger" })
                             </div>
                         </div>
                     </div>

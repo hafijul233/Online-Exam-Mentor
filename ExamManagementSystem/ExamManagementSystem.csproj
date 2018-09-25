@@ -1289,6 +1289,7 @@
     <Content Include="Views\Trainer\Search.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Organization\Information.cshtml" />
+    <Content Include="Views\Batch\Information.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
