@@ -1,4 +1,4 @@
-﻿
+﻿@model Models.Organization
 @{
     ViewBag.Title = "Organization Search";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -28,55 +28,62 @@
         <div class="col-lg-12">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Quick Example</h3>
+                    <h3 class="box-title">Organization Search Form</h3>
                 </div>
                 <!-- /.box-header -->
-                <div class="box-body">
+            <div class="box-body">
+                <fieldset>
+                <legend>Search Criteria</legend>
                     <!-- form start -->
                     <form role="form" class="form-horizontal">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="Name" class="col-sm-3 control-label">Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Enter Org. Name" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="Name" class="col-sm-3 control-label">Address</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Enter Org. Name" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="Name" class="col-sm-3 control-label">Code</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Enter Org. Name" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="Name" class="col-sm-3 control-label">Contact No</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" placeholder="Enter Org. Name" />
-                                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="Name" class="col-sm-3 control-label">Name</label>
+                                <div class="col-sm-9">
+                                    @Html.TextBoxFor(c => c.Name, new {@class = "form-control", id = "Name", placeholder="Enter Organization Name"})
+                                    @Html.ValidationMessageFor(c => c.Name, null, new {@class = "text-danger"})
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-11">
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="Address" class="col-sm-3 control-label">Address</label>
+                                <div class="col-sm-9">
+                                    @Html.TextBoxFor(c => c.Address, new {@class = "form-control", id = "Name", placeholder="Enter Organization Address"})
+                                    @Html.ValidationMessageFor(c => c.Address, null, new {@class = "text-danger"})
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="Code" class="col-sm-3 control-label">Code</label>
+                                <div class="col-sm-9">
+                                    @Html.TextBoxFor(c => c.Code, new {@class = "form-control", id = "Name", placeholder="Enter Organization Code"})
+                                    @Html.ValidationMessageFor(c => c.Code, null, new {@class = "text-danger"})
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="ContactNo" class="col-sm-3 control-label">Contact No</label>
+                                <div class="col-sm-9">
+                                    @Html.TextBoxFor(c => c.ContactNo, new {@class = "form-control", id = "Name", placeholder="Enter Organization Contact Number"})
+                                    @Html.ValidationMessageFor(c => c.ContactNo, null, new {@class = "text-danger"})
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-11">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary pull-right">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </fieldset>
+            </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
                         <div class="col-lg-12">
@@ -98,14 +105,13 @@
                                     <td>-</td>
                                     <td>
                                         <a href="">
-                                            <button class="btn btn-info">View</button>
+                                            <button class="btn btn-info"><span class="fa fa-eye"></span></button>
                                         </a>
                                         <a href="">
-                                            <button class="btn btn-warning">Edit</button>
+                                            <button class="btn btn-warning"><span class="fa fa-edit"></span></button>
                                         </a>
                                         <a href="">
-                                            <button class="btn btn-danger">Delete
-                                                </button>
+                                            <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
                                         </a>
 
                                     </td>
