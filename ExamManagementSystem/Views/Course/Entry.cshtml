@@ -53,7 +53,7 @@
 
                             <div class="col-sm-7">
                                @*<input type="password" class="form-control" placeholder="Password">*@
-                                @Html.TextBoxFor(c => c.Name, new { @class = "form-control", id = "Name", placeholder = "Enter Organization Name" })
+                                @Html.TextBoxFor(c => c.Name, new { @class = "form-control", id = "Name", placeholder = "Enter Course  Name" })
                                 @Html.ValidationMessageFor(c => c.Name, null, new { @class = "text-danger" })
 
                             </div>
@@ -63,7 +63,7 @@
 
                             <div class="col-sm-7">
                                 @*<input type="password" class="form-control" placeholder="Password">*@
-                                @Html.TextBoxFor(c => c.Code, new { @class = "form-control", id = "Code", placeholder = "Enter Organization Code" })
+                                @Html.TextBoxFor(c => c.Code, new { @class = "form-control", id = "Code", placeholder = "Enter Course  Code" })
                                 @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
                             </div>
                         </div>
@@ -72,7 +72,7 @@
 
                             <div class="col-sm-4">
                                 @*<input type="password" class="form-control" placeholder="Password" />*@
-                                @Html.TextBoxFor(c => c.Duration, new { @class = "form-control", id = "Duration", placeholder = "Enter Organization Duration" })
+                                @Html.TextBoxFor(c => c.Duration, new { @class = "form-control", id = "Duration", placeholder = "Enter Course  Duration" })
                                 @Html.ValidationMessageFor(c => c.Duration, null, new { @class = "text-danger" })
 
                             </div>
@@ -81,7 +81,7 @@
                             <label for="Credit" class="col-sm-3 control-label">Credit</label>
 
                             <div class="col-sm-4">
-                                @Html.TextBoxFor(c => c.Credit, new { @class = "form-control", id = "Credit", placeholder = "Enter Organization Credit" })
+                                @Html.TextBoxFor(c => c.Credit, new { @class = "form-control", id = "Credit", placeholder = "Enter Course  Credit" })
                                 @Html.ValidationMessageFor(c => c.Credit, null, new { @class = "text-danger" })
                             </div>
                         </div>
@@ -90,7 +90,7 @@
 
                             <div class="col-sm-7">
                                 @*<textarea id="editor1" name="editor1" rows="10" cols="80"></textarea>*@
-                                @Html.TextAreaFor(c => c.Outline, new { @class = "form-control", id = "Outline", placeholder = "Enter Organization Outline" })
+                                @Html.TextAreaFor(c => c.Outline, new { @class = "form-control", id = "Outline", placeholder = "Enter Course  Outline" })
                                 @Html.ValidationMessageFor(c => c.Outline, null, new { @class = "text-danger" })
                                 
                             </div>

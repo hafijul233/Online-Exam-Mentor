@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Models.Trainer
+@{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <section class="content-header">
@@ -28,7 +29,7 @@
                     <div class="box-body">
                         
                         <div class="form-group">
-                            <label for="inputEmail1" class="col-sm-3 control-label">Organization</label>
+                            <label for="OrganizationId" class="col-sm-3 control-label">Organization</label>
 
                             <div class="col-sm-7">
                                 <select class="form-control">
@@ -42,7 +43,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail2" class="col-sm-3 control-label">Course</label>
+                            <label for="CourseId" class="col-sm-3 control-label">Course</label>
 
                             <div class="col-sm-7">
                                 <select class="form-control">
@@ -56,7 +57,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-3 control-label">Batch</label>
+                            <label for="BachId" class="col-sm-3 control-label">Batch</label>
 
                             <div class="col-sm-7">
                                 <select class="form-control">
@@ -70,69 +71,86 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail4" class="col-sm-3 control-label">Name</label>
+                          
+                            <label for="Name" class="col-sm-3 control-label">Name</label>
 
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" placeholder="Name">
+                                @*<input type="text" class="form-control" placeholder="Name">*@
+                                @Html.TextBoxFor(c => c.Name, new { @class = "form-control", id = "Name", placeholder = "Enter Trainer Name" })
+                                @Html.ValidationMessageFor(c => c.Name, null, new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword5" class="col-sm-3 control-label">Contact</label>
+                            <label for="ContactNo" class="col-sm-3 control-label">Contuct No</label>
 
                             <div class="col-sm-7">
-                                <input type="password" class="form-control" placeholder="Contact">
+                                @*<input type="password" class="form-control" placeholder="Contuct No">*@
+                                @Html.TextBoxFor(c => c.ContactNo, new { @class = "form-control", id = "ContactNo", placeholder = "Enter  Trainer ContactNo" })
+                                @Html.ValidationMessageFor(c => c.ContactNo, null, new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword6" class="col-sm-3 control-label">Email</label>
+                            <label for="Email " class="col-sm-3 control-label">Email</label>
 
                             <div class="col-sm-7">
-                                <input type="password" class="form-control" placeholder="Email">
+                                @*<input type="password" class="form-control" placeholder="Email">*@
+                                @Html.TextBoxFor(c => c.Email, new { @class = "form-control", id = "Email ", placeholder = "Enter  Trainer Email " })
+                                @Html.ValidationMessageFor(c => c.Email, null, new { @class = "text-danger" })
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="inputEmail7" class="col-sm-3 control-label">Address Line 1</label>
+                            <label for="AddressLine1" class="col-sm-3 control-label">Address Line 1</label>
 
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" placeholder="Address1">
+                                @*<input type="text" class="form-control" placeholder="Address1">*@
+                                @Html.TextBoxFor(c => c.AddressLine1, new { @class = "form-control", id = "AddressLine1", placeholder = "Enter  Trainer AddressLine1" })
+                                @Html.ValidationMessageFor(c => c.AddressLine1, null, new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword8" class="col-sm-3 control-label">Address Line 2</label>
+                            <label for="AddressLine2" class="col-sm-3 control-label">Address Line 2</label>
 
                             <div class="col-sm-7">
-                                <input type="password" class="form-control" placeholder="Address2">
+                                @*<input type="password" class="form-control" placeholder="Address2">*@
+                                @Html.TextBoxFor(c => c.AddressLine2, new { @class = "form-control", id = "AddressLine2", placeholder = "Enter Trainer AddressLine2" })
+                                @Html.ValidationMessageFor(c => c.AddressLine2, null, new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword9" class="col-sm-3 control-label">City</label>
+                            <label for="City" class="col-sm-3 control-label">City</label>
 
                             <div class="col-sm-7">
-                                <input type="password" class="form-control" placeholder="City">
+                                @*<input type="password" class="form-control" placeholder="City">*@
+                                @Html.TextBoxFor(c => c.City, new { @class = "form-control", id = "City", placeholder = "Enter Trainer City" })
+                                @Html.ValidationMessageFor(c => c.City, null, new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword10" class="col-sm-3 control-label">Postal Code</label>
+                            <label for="PostalCode " class="col-sm-3 control-label">Postal Code</label>
 
                             <div class="col-sm-4">
-                                <input type="password" class="form-control" placeholder="Postal">
+                                @*<input type="password" class="form-control" placeholder="Postal">*@
+                                @Html.TextBoxFor(c => c.PostalCode, new { @class = "form-control", id = "PostalCode ", placeholder = "Enter  Trainer PostalCode " })
+                                @Html.ValidationMessageFor(c => c.PostalCode, null, new { @class = "text-danger" })
                             </div>
                         </div>
                          
                         <div class="form-group">
-                            <label for="inputPassword11" class="col-sm-3 control-label">Country</label>
+                            <label for="Country" class="col-sm-3 control-label">Country</label>
 
-                            <div class="col-sm-7">
-                                <input type="password" class="form-control" placeholder="Country">
+                            <div class="col-sm-5">
+                                @*<input type="password" class="form-control" placeholder="Country">*@
+                                @Html.TextBoxFor(c => c.Country, new { @class = "form-control", id = "Country", placeholder = "Enter  Trainer Country" })
+                                @Html.ValidationMessageFor(c => c.Country, null, new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword12" class="col-sm-3 control-label">Logo</label>
+                            <label for="ProfilePicture" class="col-sm-3 control-label">Image</label>
 
                             <div class="col-sm-7">
                                 <div class="row">
@@ -148,7 +166,7 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <button type="submit" class="btn btn-info pull-right">Save</button>
+                        <button type="submit" class="btn btn-info col-md-offset-11">Save</button>
                     </div>
                     <!-- /.box-footer -->
                 </form>

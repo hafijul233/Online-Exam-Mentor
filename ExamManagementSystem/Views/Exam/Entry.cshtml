@@ -79,7 +79,7 @@
 
                             <div class="col-sm-4">
                                 @*<input type="password" class="form-control"  placeholder="Code">*@
-                                @Html.TextBoxFor(c => c.Code, new { @class = "form-control", id = "Code", placeholder = "Enter Organization Code" })
+                                @Html.TextBoxFor(c => c.Code, new { @class = "form-control", id = "Code", placeholder = "Enter Exam Code" })
                                 @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
                             </div>
                         </div>
@@ -88,7 +88,7 @@
 
                             <div class="col-sm-7">
                                 @*<input type="password" class="form-control"  placeholder="Topic">*@
-                                @Html.TextBoxFor(c => c.Topics, new { @class = "form-control", id = "Topics ", placeholder = "Enter Organization Topics " })
+                                @Html.TextBoxFor(c => c.Topics, new { @class = "form-control", id = "Topics ", placeholder = "Enter Exam Topics " })
                                 @Html.ValidationMessageFor(c => c.Topics, null, new { @class = "text-danger" })
                             </div>
                         </div>
@@ -97,7 +97,7 @@
 
                             <div class="col-sm-4">
                                 @*<input type="password" class="form-control"  placeholder="Full Marks">*@
-                                @Html.TextBoxFor(c => c.FullMarks, new { @class = "form-control", id = "FullMarks ", placeholder = "Enter Organization FullMarks " })
+                                @Html.TextBoxFor(c => c.FullMarks, new { @class = "form-control", id = "FullMarks ", placeholder = "Enter Exam FullMarks " })
                                 @Html.ValidationMessageFor(c => c.FullMarks, null, new { @class = "text-danger" })
                             </div>
                         </div>

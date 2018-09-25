@@ -70,7 +70,7 @@
                             <label for="Description" class="col-sm-3 control-label">Description</label>
 
                             <div class="col-sm-7">
-                                @Html.TextAreaFor(c => c.Description, new { @class = "form-control", placeholder = "Batch Number",rows="3" })
+                                @Html.TextAreaFor(c => c.Description, new { @class = "form-control", placeholder = "Batch Description", rows = "3" })
                                 @Html.ValidationMessageFor(c => c.Description, null, new { @class = "text-danger" })
                             </div>
                         </div>
