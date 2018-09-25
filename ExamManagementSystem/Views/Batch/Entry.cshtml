@@ -78,7 +78,7 @@
                             <label for="StartDate" class="col-sm-3 control-label">Start Date</label>
 
                             <div class="col-sm-4">
-                                @Html.TextBoxFor(c => c.StartDate, new { @class = "form-control pull-right", placeholder = "2018-09-23", id = "startdatepicker",required})
+                                @Html.TextBoxFor(c => c.StartDate, new { @class = "form-control pull-right", placeholder = "2018-09-23", id = "startdatepicker"})
                                 @Html.ValidationMessageFor(c => c.StartDate, null, new { @class = "text-danger" }) 
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                             <label for="EndDate" class="col-sm-3 control-label">End Date</label>
 
                             <div class="col-sm-4">
-                                @Html.TextBoxFor(c => c.EndDate, new { @class = "form-control pull-right", placeholder = "2018-09-23", id = "enddatepicker", required})
+                                @Html.TextBoxFor(c => c.EndDate, new { @class = "form-control pull-right", placeholder = "2018-09-23", id = "enddatepicker"})
                                 @Html.ValidationMessageFor(c => c.EndDate, null, new { @class = "text-danger" })
                             </div>
                         </div>
