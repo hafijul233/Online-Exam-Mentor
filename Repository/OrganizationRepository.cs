@@ -11,10 +11,10 @@ namespace Repository
     public class OrganizationRepository
     {
         AbcExamManagerDb _EMSDb = new AbcExamManagerDb();
-        public int RepositoyEntry(Organization organization)
+        public int RepositoyEntry(Organization newOrganization)
         {
 
-            _EMSDb.Organizations.Add(organization);
+            _EMSDb.Organizations.Add(newOrganization);
 
             int confirm = _EMSDb.SaveChanges();
 

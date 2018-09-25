@@ -12,9 +12,9 @@ namespace BLL
     {
         OrganizationRepository newOrganizationRepository = new OrganizationRepository();
 
-        public bool ManagerEntry(Organization organization)
+        public bool ManagerEntry(Organization newOrganization)
         {
-            int confirm = newOrganizationRepository.RepositoyEntry(organization);
+            int confirm = newOrganizationRepository.RepositoyEntry(newOrganization);
 
             if (confirm > 0)
             {

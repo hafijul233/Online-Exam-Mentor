@@ -8,13 +8,13 @@ using Repository;
 
 namespace BLL
 {
-    public class OrganizationManager
+    public class CourseManager
     {
-        OrganizationRepository newOrganizationRepository = new OrganizationRepository();
+        CourseRepository newCourseRepository = new CourseRepository();
 
-        public bool ManagerEntry(Organization organization)
+        public bool ManagerEntry(Course newCourse)
         {
-            int confirm = newOrganizationRepository.RepositoyEntry(organization);
+            int confirm = newCourseRepository.RepositoyEntry(newCourse);
 
             if (confirm > 0)
             {

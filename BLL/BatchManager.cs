@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 using Models;
 using Repository;
 
-namespace ExamManagementSystem.Controllers
+namespace BLL
 {
     public class BatchManager
     {

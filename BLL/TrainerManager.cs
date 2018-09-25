@@ -1,26 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using Models;
 using Repository;
 
 namespace BLL
 {
-    public class OrganizationManager
+    public class TrainerManager
     {
-        OrganizationRepository newOrganizationRepository = new OrganizationRepository();
-
-        public bool ManagerEntry(Organization organization)
+        TrainerRepository newTrainerRepository = new TrainerRepository();
+        public bool ManagerEntry(Trainer newTrainer)
         {
-            int confirm = newOrganizationRepository.RepositoyEntry(organization);
+            int confirm = newTrainerRepository.RepositoyEntry(newTrainer);
 
             if (confirm > 0)
             {
                 return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
+
     }
 }

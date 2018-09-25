@@ -8,13 +8,13 @@ using Models;
 
 namespace Repository
 {
-    public class OrganizationRepository
+    public class ParticipantRepository
     {
         AbcExamManagerDb _EMSDb = new AbcExamManagerDb();
-        public int RepositoyEntry(Organization organization)
+        public int RepositoyEntry(Participant newParticipant)
         {
 
-            _EMSDb.Organizations.Add(organization);
+            _EMSDb.Participants.Add(newParticipant);
 
             int confirm = _EMSDb.SaveChanges();
 
