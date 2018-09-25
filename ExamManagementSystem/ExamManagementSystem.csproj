@@ -173,6 +173,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1280,20 +1281,24 @@
     <Content Include="Views\Exam\Search.cshtml" />
     <Content Include="Views\Participant\Search.cshtml" />
     <Content Include="Views\Trainer\Search.cshtml" />
-    <Content Include="Views\Organization\Information.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{a54eb119-53c6-4468-ac80-3dd5cbbf8b2f}</Project>
-      <Name>Models</Name>
-    </ProjectReference>
+    <Content Include="Views\Organization\Information.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{ebdc10e4-f1de-413e-92fd-b7bd5f8c02eb}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{a54eb119-53c6-4468-ac80-3dd5cbbf8b2f}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

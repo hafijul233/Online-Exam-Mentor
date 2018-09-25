@@ -1,7 +1,9 @@
-﻿
+﻿@using Models
 @{
     ViewBag.Title = "Organization Infromation";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    Organization organization = ViewBag.Organization;
 }
 
 <!-- DataTables -->
@@ -36,12 +38,12 @@
                 <div class="box-body">
                     <div class="row">
                         <div class="col-sm-3">
-                            <img src="~/App_Data/Organization/Logo/logo.png" class="img-bordered" alt="Organization Name" />
+                            <img src="~/App_Data/Organization/Logo/logo.png" class="img-bordered" alt="@organization.Logo" />
                         </div>
                         <div class="col-sm-9">
-                            <h2> Hafiz Softwares.Labs</h2>
+                            <h2> @organization.Name</h2>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                @organization.About
                             </p>
                         </div>
                     </div>
@@ -523,8 +525,8 @@
                  </div>
                  <!-- /.box-body -->
                  <div class="box-footer">
-                     <h4 class="text-center">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
-                     <p class="text-center">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.</p>
+                     <h4 class="text-center">@organization.Address</h4>
+                     <p class="text-center">@organization.ContactNo</p>
                  </div>
                  <!-- /.box-footer -->
             </div>

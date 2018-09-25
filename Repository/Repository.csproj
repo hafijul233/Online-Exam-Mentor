@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="OrganizationRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -54,9 +54,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DBContext\DBContext.csproj">
+    <ProjectReference Include="..\DBContext\DataBaseContext.csproj">
       <Project>{b1b85500-0496-4772-96a2-e71c1ee0a5f4}</Project>
-      <Name>DBContext</Name>
+      <Name>DataBaseContext</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{a54eb119-53c6-4468-ac80-3dd5cbbf8b2f}</Project>

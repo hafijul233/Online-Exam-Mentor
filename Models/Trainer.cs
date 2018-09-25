@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Trainer
+    public class Trainer
     {
+        public int Id { get; set; }
         public int OrganizationId { get; set; }
         public int CourseId { get; set; }
         public int BachId { get; set; }

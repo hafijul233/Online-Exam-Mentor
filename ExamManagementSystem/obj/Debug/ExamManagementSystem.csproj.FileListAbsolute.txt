@@ -280,3 +280,9 @@ I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bi
 I:\Visual Studio\Visual Studio 2017\ExamManagementSystem\ExamManagementSystem\bin\Models.dll.config
 E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\Models.dll
 E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\Models.pdb
+E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\BLL.dll
+E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\Repository.dll
+E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\DBContext.dll
+E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\BLL.pdb
+E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\Repository.pdb
+E:\Hafiz1576\ExamManagementSystem\ExamManagementSystem\bin\DBContext.pdb

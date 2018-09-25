@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Exam
+    public class Exam
     {
+        public int Id { get; set; }
         public int OrganizationId { get; set; }
         public int CourseId { get; set; }
         public string ExamType { get; set; }
