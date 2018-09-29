@@ -1,0 +1,18 @@
+namespace DBContext.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class reset : DbMigration
+    {
+        public override void Up()
+        {
+            AddColumn("dbo.Participants", "RegNo", c => c.String());
+        }
+        
+        public override void Down()
+        {
+            DropColumn("dbo.Participants", "RegNo");
+        }
+    }
+}
