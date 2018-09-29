@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Models.Exam
+
+@{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -30,7 +32,7 @@
                     <div class="box-body">
                        
                         <div class="form-group">
-                            <label for="inputEmail1" class="col-sm-3 control-label">Organization</label>
+                            <label for="Organization" class="col-sm-3 control-label">Organization</label>
 
                             <div class="col-sm-7">
                                 <select class="form-control">
@@ -44,7 +46,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail2" class="col-sm-3 control-label">Course</label>
+                            <label for="Course" class="col-sm-3 control-label">Course</label>
 
                             <div class="col-sm-7">
                                 <select class="form-control">
@@ -58,7 +60,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail1" class="col-sm-3 control-label">Exam Type</label>
+                            <label for="ExamType" class="col-sm-3 control-label">Exam Type</label>
 
                             <div class="col-sm-7">
                                 <select class="form-control">
@@ -73,37 +75,43 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="inputPassword1" class="col-sm-3 control-label">Code</label>
+                            <label for="Code" class="col-sm-3 control-label">Code</label>
 
                             <div class="col-sm-4">
-                                <input type="password" class="form-control"  placeholder="Code">
+                                @*<input type="password" class="form-control"  placeholder="Code">*@
+                                @Html.TextBoxFor(c => c.Code, new { @class = "form-control", id = "Code", placeholder = "Enter Exam Code" })
+                                @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-3 control-label">Topic</label>
+                            <label for="Topics " class="col-sm-3 control-label">Topics</label>
 
                             <div class="col-sm-7">
-                                <input type="password" class="form-control"  placeholder="Topic">
+                                @*<input type="password" class="form-control"  placeholder="Topic">*@
+                                @Html.TextBoxFor(c => c.Topics, new { @class = "form-control", id = "Topics ", placeholder = "Enter Exam Topics " })
+                                @Html.ValidationMessageFor(c => c.Topics, null, new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword4" class="col-sm-3 control-label">Full Marks</label>
+                            <label for="FullMarks" class="col-sm-3 control-label">Full Marks</label>
 
                             <div class="col-sm-4">
-                                <input type="password" class="form-control"  placeholder="Full Marks">
+                                @*<input type="password" class="form-control"  placeholder="Full Marks">*@
+                                @Html.TextBoxFor(c => c.FullMarks, new { @class = "form-control", id = "FullMarks ", placeholder = "Enter Exam FullMarks " })
+                                @Html.ValidationMessageFor(c => c.FullMarks, null, new { @class = "text-danger" })
                             </div>
                         </div>
                       
                         <div class="form-group">
-                            <label for="inputPassword4" class="col-sm-3 control-label">Duration</label>
-
+                            <label for="Duration" class="col-sm-3 control-label">Duration</label>
+                            <h4>Customiz korte hobe</h4>
                             
                         </div>
                    
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <button type="submit" class="btn btn-info pull-right">Save</button>
+                        <button type="submit" class="btn btn-info col-md-offset-11">Save</button>
                     </div>
                     <!-- /.box-footer -->
                 </form>

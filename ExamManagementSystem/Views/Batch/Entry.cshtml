@@ -2,7 +2,7 @@
 @model Models.Batch
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewBag.Title = "Batch Entry";
+    //ViewBag.Title = "Batch Entry";
 }
 <section class="content-header">
     <h1>
@@ -70,7 +70,7 @@
                             <label for="Description" class="col-sm-3 control-label">Description</label>
 
                             <div class="col-sm-7">
-                                @Html.TextAreaFor(c => c.Description, new { @class = "form-control", placeholder = "Batch Number",rows="3" })
+                                @Html.TextAreaFor(c => c.Description, new { @class = "form-control", placeholder = "Batch Description", rows = "3" })
                                 @Html.ValidationMessageFor(c => c.Description, null, new { @class = "text-danger" })
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <button type="submit" class="btn btn-info pull-right">Save</button>
+                        <button type="submit" class="btn btn-info col-md-offset-11">Save</button>
                     </div>
                     <!-- /.box-footer -->
                 </form>

@@ -1,7 +1,7 @@
 ﻿@model Models.Course
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewBag.Title = "Entry Page";
+
 }
 <!-- bootstrap wysihtml5 - text editor -->
 <link rel="stylesheet" href="~/Plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
@@ -49,42 +49,54 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-3 control-label">Name</label>
+                            <label for="Name" class="col-sm-3 control-label">Name</label>
 
                             <div class="col-sm-7">
-                                <input type="password" class="form-control" placeholder="Password">
+                               @*<input type="password" class="form-control" placeholder="Password">*@
+                                @Html.TextBoxFor(c => c.Name, new { @class = "form-control", id = "Name", placeholder = "Enter Course  Name" })
+                                @Html.ValidationMessageFor(c => c.Name, null, new { @class = "text-danger" })
+
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-3 control-label">Code</label>
+                            <label for="Code" class="col-sm-3 control-label">Code</label>
 
                             <div class="col-sm-7">
-                                <input type="password" class="form-control" placeholder="Password">
+                                @*<input type="password" class="form-control" placeholder="Password">*@
+                                @Html.TextBoxFor(c => c.Code, new { @class = "form-control", id = "Code", placeholder = "Enter Course  Code" })
+                                @Html.ValidationMessageFor(c => c.Code, null, new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-3 control-label">Course Duration (hrs)</label>
+                            <label for="Duration" class="col-sm-3 control-label">Course Duration (hrs)</label>
 
                             <div class="col-sm-4">
-                                <input type="password" class="form-control" placeholder="Password">
+                                @*<input type="password" class="form-control" placeholder="Password" />*@
+                                @Html.TextBoxFor(c => c.Duration, new { @class = "form-control", id = "Duration", placeholder = "Enter Course  Duration" })
+                                @Html.ValidationMessageFor(c => c.Duration, null, new { @class = "text-danger" })
+
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-3 control-label">Credit</label>
+                            <label for="Credit" class="col-sm-3 control-label">Credit</label>
 
                             <div class="col-sm-4">
-                                <input type="password" class="form-control" placeholder="Password">
+                                @Html.TextBoxFor(c => c.Credit, new { @class = "form-control", id = "Credit", placeholder = "Enter Course  Credit" })
+                                @Html.ValidationMessageFor(c => c.Credit, null, new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-3 control-label">Outline</label>
+                            <label for="Outline" class="col-sm-3 control-label">Outline</label>
 
                             <div class="col-sm-7">
-                                <textarea id="editor1" name="editor1" rows="10" cols="80"></textarea>
+                                @*<textarea id="editor1" name="editor1" rows="10" cols="80"></textarea>*@
+                                @Html.TextAreaFor(c => c.Outline, new { @class = "form-control", id = "Outline", placeholder = "Enter Course  Outline" })
+                                @Html.ValidationMessageFor(c => c.Outline, null, new { @class = "text-danger" })
+                                
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="tag" class="col-sm-3 control-label">Tags</label>
+                            <label for="Tag" class="col-sm-3 control-label">Tags</label>
                             
                             <div class="col-sm-7">
                                 <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
@@ -101,7 +113,7 @@
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer">
-                        <button type="submit" class="btn btn-info pull-right">Save</button>
+                        <button type="submit" class="btn btn-info col-md-offset-11">Save</button>
                     </div>
                     <!-- /.box-footer -->
                 </form>
