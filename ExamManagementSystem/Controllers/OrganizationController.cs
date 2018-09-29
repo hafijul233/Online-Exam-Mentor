@@ -36,12 +36,12 @@ namespace ExamManagementSystem.Controllers
                 {
                     ViewBag.Organization = newOrganization;
 
-                    return View("Information");
+                    return View("Confirm");
                 }
 
                 ViewBag.Organization = newOrganization;
 
-                return View("Information");
+                return View("Confirm");
 
             }
 
@@ -50,12 +50,26 @@ namespace ExamManagementSystem.Controllers
                return View();    
         }
 
+        [HttpGet]
         public ActionResult Search()
+        {
+            
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Search(Organization searchOrganization)
         {
             return View();
         }
 
         public ActionResult Information()
+        {
+            return View();
+        }
+
+        public ActionResult Confirm()
         {
             return View();
         }

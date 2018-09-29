@@ -20,5 +20,22 @@ namespace Repository
 
             return confirm;
         }
+
+        public List<SelectedItemInfo> GetOrganizationList()
+        {
+            List<SelectedItemInfo> SelectedOrgList = new List<SelectedItemInfo>();
+
+            var SelectedItem = (from organization in _EMSDb.Organizations
+                select new { Id = organization.Id, Name = organization.Name }).ToList();
+
+            SelectedItem.ToList();
+
+            foreach (var item in SelectedItem)
+            {
+                SelectedOrgList.Add(new SelectedItemInfo() { Id = item.Id, Name = item.Name });
+            }
+
+            return SelectedOrgList;
+        }
     }
 }

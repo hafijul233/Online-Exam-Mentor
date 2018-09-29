@@ -53,6 +53,7 @@
     <Compile Include="Organization.cs" />
     <Compile Include="Participant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectedItemInfo.cs" />
     <Compile Include="Trainer.cs" />
   </ItemGroup>
   <ItemGroup>

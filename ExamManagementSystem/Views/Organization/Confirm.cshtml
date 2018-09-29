@@ -1,0 +1,45 @@
+﻿@using Models
+@model Models.Organization
+
+@{
+    ViewBag.Title = "Confirmation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    Organization organization = ViewBag.Organization;
+    if (organization.Name == null)
+    {
+        organization.Name = "Default Name";
+    }
+
+}
+<section class="content-header">
+    <h1>
+        Registration Confirmation
+        <small>Organization</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li>Organization</li>
+        <li class="active">Confirmation</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+    <section class="col-lg-12">
+        <div class="box box-success box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Confirmation Message</h3>
+            </div>
+            <div class="box-body">
+                <h3 class="text-center">Organization "@organization.Name " Has SuccessFull Added.</h3>
+            </div>
+            <div class="box-footer">
+                <a class="col-lg-offset-5" href="~/Organization/Entry"><button class="btn btn-info">Add Another</button></a>
+            </div>
+        </div>
+    </section>
+        </div>
+    </section>
+

@@ -22,5 +22,10 @@ namespace BLL
             }
             return false;
         }
+
+        public List<SelectedItemInfo> GetOrganizationListFromRepo()
+        {
+            return newCourseRepository.GetOrganizationList();
+        }
     }
 }
