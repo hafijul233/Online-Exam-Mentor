@@ -1,4 +1,5 @@
-﻿@model Models.Course
+﻿@using Models
+@model Models.Course
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
@@ -6,7 +7,7 @@
 <!-- bootstrap wysihtml5 - text editor -->
 <link rel="stylesheet" href="~/Plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 <!-- Select2 -->
-<link rel="stylesheet" href="~/Plugins/select2/select2.min.css">
+<link href="~/Plugins/select2/select2.min.css" rel="stylesheet" />
 
 
 <section class="content-header">
@@ -38,7 +39,7 @@
                             <label for="inputEmail3" class="col-sm-3 control-label">Organization</label>
 
                             <div class="col-sm-7">
-                                @*Html.DropDownList("Organizationitems", null,)*@
+                                @Html.DropDownList("OrganizationId", null, new {@class = "form-control", id = "Id"})
                             </div>
                         </div>
                         <div class="form-group">
@@ -83,7 +84,7 @@
 
                             <div class="col-sm-7">
                                 @*<textarea id="editor1" name="editor1" rows="10" cols="80"></textarea>*@
-                                @Html.TextAreaFor(c => c.Outline, new { @class = "form-control", id = "Outline", placeholder = "Enter Course  Outline" })
+                                @Html.TextAreaFor(c => c.Outline, new { @class = "form-control", id = "editor1", rows = "10", cols = "80", placeholder = "Enter Course  Outline" })
                                 @Html.ValidationMessageFor(c => c.Outline, null, new { @class = "text-danger" })
                                 
                             </div>
@@ -92,14 +93,15 @@
                             <label for="Tag" class="col-sm-3 control-label">Tags</label>
                             
                             <div class="col-sm-7">
-                                <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
-                                    <option>Alabama</option>
-                                    <option>Alaska</option>
-                                    <option>California</option>
-                                    <option>Delaware</option>
-                                    <option>Tennessee</option>
-                                    <option>Texas</option>
-                                    <option>Washington</option>
+                                <select class="form-control select2" name="Tags" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                                    <option value="PHP">PHP</option>
+                                    <option value="Dot.Net">Dot.NEt</option>
+                                    <option  value="Java">Java</option>
+                                    <option value="C#">C#</option>
+                                    <option value="C++">C++</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="SEO">SEO</option>
+                                    <option value="Facebook">Facebook</option>
                                 </select>
                             </div>
                         </div>
@@ -119,14 +121,18 @@
 </section>
 <!-- CK Editor -->
 <script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="~/Plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <!-- Select2 -->
 <script src="~/Plugins/select2/select2.full.min.js"></script>
 <script>
-    $(function () {
-        // Replace the <textarea id="editor1"> with a CKEditor
-        // instance, using default configuration.
-        CKEDITOR.replace('editor1');
+    $(function() {
+        //Initialize Select2 Elements
+        $(".select2").select2();
     });
+</script>
+<script>
+            $(function () {
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace('editor1');
+            });
 </script>

@@ -28,7 +28,7 @@ namespace ExamManagementSystem.Controllers
                 ViewOrglist.Add(new SelectListItem() { Text = orgItem.Name, Value = orgItem.Id.ToString() });
             }
 
-            ViewBag.Organizationitems = ViewOrglist;
+            ViewBag.OrganizationId = ViewOrglist;
             return View();
         }
 
