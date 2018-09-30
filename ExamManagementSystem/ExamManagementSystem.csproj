@@ -1275,6 +1275,8 @@
     <Content Include="Views\Organization\Information.cshtml" />
     <Content Include="Views\Batch\Information.cshtml" />
     <Content Include="Views\Organization\Confirm.cshtml" />
+    <Content Include="Views\Course\Confirm.cshtml" />
+    <Content Include="Views\Batch\Confirm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -1286,6 +1288,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{ebdc10e4-f1de-413e-92fd-b7bd5f8c02eb}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBContext\DataBaseContext.csproj">
+      <Project>{B1B85500-0496-4772-96A2-E71C1EE0A5F4}</Project>
+      <Name>DataBaseContext</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{a54eb119-53c6-4468-ac80-3dd5cbbf8b2f}</Project>

@@ -1,0 +1,45 @@
+﻿@using Models
+@model Models.Batch
+
+@{
+    ViewBag.Title = "Confirmation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    Batch batch = ViewBag.batch;
+    if (batch.BatchNo == null)
+    {
+        batch.BatchNo = 0;
+    }
+
+}
+<section class="content-header">
+    <h1>
+        Registration Confirmation
+        <small>Batch</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li>Batch</li>
+        <li class="active">Confirmation</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+    <section class="col-lg-12">
+        <div class="box box-success box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Confirmation Message</h3>
+            </div>
+            <div class="box-body">
+                <h3 class="text-center">Batch No "@batch.BatchNo.ToString() " Has SuccessFull Added.</h3>
+            </div>
+            <div class="box-footer">
+                <a class="col-lg-offset-5" href="~/Batch/Entry"><button class="btn btn-info">Add Another</button></a>
+            </div>
+        </div>
+    </section>
+        </div>
+    </section>
+

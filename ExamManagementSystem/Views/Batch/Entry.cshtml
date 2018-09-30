@@ -2,8 +2,14 @@
 @model Models.Batch
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    //ViewBag.Title = "Batch Entry";
+    ViewBag.Title = "Batch Entry";
 }
+
+<!-- bootstrap datepicker -->
+<link rel="stylesheet" href="~/Plugins/datepicker/datepicker3.css">
+<!-- bootstrap datepicker -->
+<script src="~/Plugins/datepicker/bootstrap-datepicker.js"></script>
+
 <section class="content-header">
     <h1>
         Entry Page
@@ -28,41 +34,27 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form class="form-horizontal">
+                <form class="form-horizontal" action="#" method="post">
                     <div class="box-body">
                         <div class="form-group">
                             <label for="Organization" class="col-sm-3 control-label">Organization</label>
 
                             <div class="col-sm-7">
-                                <select class="form-control">
-                                    <option value="1">Option1</option>
-                                    <option value="1">Option1</option>
-                                    <option value="1">Option1</option>
-                                    <option value="1">Option1</option>
-                                    <option value="1">Option1</option>
-                                    <option value="1">Option1</option>
-                                </select>
+                                @Html.DropDownList("OrganizationId", null, new { @class = "form-control", id = "OrganizationId" })
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="Course" class="col-sm-3 control-label">Course</label>
+                            <label for="CourseId" class="col-sm-3 control-label">Course</label>
 
                             <div class="col-sm-7">
-                                <select class="form-control">
-                                    <option value="1">Option1</option>
-                                    <option value="1">Option1</option>
-                                    <option value="1">Option1</option>
-                                    <option value="1">Option1</option>
-                                    <option value="1">Option1</option>
-                                    <option value="1">Option1</option>
-                                </select>
+                                @Html.DropDownList("CourseId", null, new { @class = "form-control", id = "CourseId" })
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="BatchNo" class="col-sm-3 control-label">Batch No</label>
 
                             <div class="col-sm-5">
-                                @Html.TextBoxFor(c => c.BatchNo, new {@class = "form-control", placeholder = "Batch Number"})
+                                @Html.TextBoxFor(c => c.BatchNo, new { @class = "form-control", placeholder = "Batch Number" })
                                 @Html.ValidationMessageFor(c => c.BatchNo, null, new { @class = "text-danger" })
                             </div>
                         </div>
@@ -78,15 +70,15 @@
                             <label for="StartDate" class="col-sm-3 control-label">Start Date</label>
 
                             <div class="col-sm-4">
-                                @Html.TextBoxFor(c => c.StartDate, new { @class = "form-control pull-right", placeholder = "2018-09-23", id = "startdatepicker"})
-                                @Html.ValidationMessageFor(c => c.StartDate, null, new { @class = "text-danger" }) 
+                                @Html.TextBoxFor(c => c.StartDate, new { @class = "form-control pull-right", placeholder = "2018-09-23", id = "startdatepicker" })
+                                @Html.ValidationMessageFor(c => c.StartDate, null, new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="EndDate" class="col-sm-3 control-label">End Date</label>
 
                             <div class="col-sm-4">
-                                @Html.TextBoxFor(c => c.EndDate, new { @class = "form-control pull-right", placeholder = "2018-09-23", id = "enddatepicker"})
+                                @Html.TextBoxFor(c => c.EndDate, new { @class = "form-control pull-right", placeholder = "2018-09-23", id = "enddatepicker" })
                                 @Html.ValidationMessageFor(c => c.EndDate, null, new { @class = "text-danger" })
                             </div>
                         </div>
@@ -104,3 +96,24 @@
     </div>
     <!-- /.row (main row) -->
 </section>
+
+<script type="text/javascript">
+    $(function () {
+        //Date picker
+        $('#startdatepicker').datepicker({
+            autoclose: true,
+            format: 'yyyy-mm-dd'
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        //Date picker
+        $('#enddatepicker').datepicker({
+            autoclose: true,
+            format: 'yyyy-mm-dd'
+        });
+    });
+</script>
+

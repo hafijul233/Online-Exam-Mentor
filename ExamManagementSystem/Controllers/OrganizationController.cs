@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BLL;
+using DataBaseContext;
 using Models;
 
 namespace ExamManagementSystem.Controllers
@@ -11,10 +12,21 @@ namespace ExamManagementSystem.Controllers
     public class OrganizationController : Controller
     {
         OrganizationManager newOrganizationManager = new OrganizationManager();
+
+        AbcExamManagerDb _EMSDb = new AbcExamManagerDb();
         //
         // GET: /Organization/
         public ActionResult Index()
         {
+            List<Organization> SelectedOrgList = new List<Organization>();
+            
+            var SelectedOrgItem = (from organization in _EMSDb.Organizations
+                select organization).ToList();
+
+            SelectedOrgItem.ToList();
+
+            ViewBag.Organizations = SelectedOrgItem;
+
             return View();
         }
         [HttpGet]
