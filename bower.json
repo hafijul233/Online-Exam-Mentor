@@ -1,0 +1,23 @@
+{
+  "name": "Online-Exam-Mentor",
+  "homepage": "https://github.com/hafijul233/Online-Exam-Mentor",
+  "authors": [
+    "Hafijul Islam <hafijul233@gmail.com>"
+  ],
+  "description": "Online Examination Monitoring and hosting system",
+  "main": "index.php",
+  "keywords": [
+    "Exam",
+    "Mentor",
+    "Online",
+    "resources"
+  ],
+  "license": "No",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

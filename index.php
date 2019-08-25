@@ -2,7 +2,7 @@
 /**
  * CodeIgniter
  *
- * An open source application development framework for PHP
+ * An open source src development framework for PHP
  *
  * This content is released under the MIT License (MIT)
  *
@@ -85,7 +85,7 @@ switch (ENVIRONMENT)
 
 	default:
 		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-		echo 'The application environment is not set correctly.';
+		echo 'The src environment is not set correctly.';
 		exit(1); // EXIT_ERROR
 }
 
@@ -94,17 +94,17 @@ switch (ENVIRONMENT)
  * SYSTEM DIRECTORY NAME
  *---------------------------------------------------------------
  *
- * This variable must contain the name of your "system" directory.
+ * This variable must contain the name of your "sys" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = 'system';
+	$system_path = 'sys';
 
 /*
  *---------------------------------------------------------------
  * APPLICATION DIRECTORY NAME
  *---------------------------------------------------------------
  *
- * If you want this front controller to use a different "application"
+ * If you want this front controller to use a different "src"
  * directory than the default one you can set its name here. The directory
  * can also be renamed or relocated anywhere on your server. If you do,
  * use an absolute (full) server path.
@@ -114,17 +114,17 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = 'application';
+	$application_folder = 'src';
 
 /*
  *---------------------------------------------------------------
  * VIEW DIRECTORY NAME
  *---------------------------------------------------------------
  *
- * If you want to move the view directory out of the application
+ * If you want to move the view directory out of the src
  * directory, set the path to it here. The directory can be renamed
  * and relocated anywhere on your server. If blank, it will default
- * to the standard location inside your application directory.
+ * to the standard location inside your src directory.
  * If you do move this, use an absolute (full) server path.
  *
  * NO TRAILING SLASH!
@@ -145,7 +145,7 @@ switch (ENVIRONMENT)
  * routing in a specific front controller that shares a common CI installation.
  *
  * IMPORTANT: If you set the routing here, NO OTHER controller will be
- * callable. In essence, this preference limits your application to ONE
+ * callable. In essence, this preference limits your src to ONE
  * specific controller. Leave the function name blank if you need
  * to call functions dynamically via the URI.
  *
@@ -170,7 +170,7 @@ switch (ENVIRONMENT)
  * The $assign_to_config array below will be passed dynamically to the
  * config class when initialized. This allows you to set custom config
  * items or override any default config values found in the config.php file.
- * This can be handy as it permits you to share one application between
+ * This can be handy as it permits you to share one src between
  * multiple front controller files, with each file containing different
  * config values.
  *
@@ -186,7 +186,7 @@ switch (ENVIRONMENT)
 
 /*
  * ---------------------------------------------------------------
- *  Resolve the system path for increased reliability
+ *  Resolve the sys path for increased reliability
  * ---------------------------------------------------------------
  */
 
@@ -210,11 +210,11 @@ switch (ENVIRONMENT)
 		).DIRECTORY_SEPARATOR;
 	}
 
-	// Is the system path correct?
+	// Is the sys path correct?
 	if ( ! is_dir($system_path))
 	{
 		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		echo 'Your sys folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
 		exit(3); // EXIT_CONFIG
 	}
 
@@ -226,16 +226,16 @@ switch (ENVIRONMENT)
 	// The name of THIS file
 	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
-	// Path to the system directory
+	// Path to the sys directory
 	define('BASEPATH', $system_path);
 
 	// Path to the front controller (this file) directory
 	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 
-	// Name of the "system" directory
+	// Name of the "sys" directory
 	define('SYSDIR', basename(BASEPATH));
 
-	// The path to the "application" directory
+	// The path to the "src" directory
 	if (is_dir($application_folder))
 	{
 		if (($_temp = realpath($application_folder)) !== FALSE)
@@ -262,7 +262,7 @@ switch (ENVIRONMENT)
 	else
 	{
 		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-		echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		echo 'Your src folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
 		exit(3); // EXIT_CONFIG
 	}
 
